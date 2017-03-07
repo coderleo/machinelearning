@@ -14,12 +14,13 @@ def open_file(file_name):
             file_data.append([items[3],items[4],items[5],items[7],items[6]])
             #2017-01-23 iphone6s      27
     data = np.array(file_data,dtype=np.int64)
-    print data
+    #print data
 
     x_scaled = preprocessing.scale(data)
     return x_scaled
 def show_plt(data):
-    plt.plot(data[:,3],data[:,4],'ro',label='ooo')
+    print data[:,0:-1]
+    plt.plot(data[:,0:-1],data[:,4],'ro',label='ooo')
     plt.legend()
     plt.show()
     
